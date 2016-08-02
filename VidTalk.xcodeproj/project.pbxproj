@@ -12,6 +12,9 @@
 		6F0216D01D50F647005B22ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0216CE1D50F647005B22ED /* Main.storyboard */; };
 		6F0216D21D50F647005B22ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F0216D11D50F647005B22ED /* Assets.xcassets */; };
 		6F0216D51D50F647005B22ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0216D31D50F647005B22ED /* LaunchScreen.storyboard */; };
+		6F0216E41D50F72B005B22ED /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E21D50F72B005B22ED /* AAPLCameraViewController.m */; };
+		6F0216E51D50F72B005B22ED /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E31D50F72B005B22ED /* CameraVC.swift */; };
+		6F0216EA1D50F7B5005B22ED /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,13 @@
 		6F0216D11D50F647005B22ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F0216D41D50F647005B22ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F0216D61D50F647005B22ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F0216DC1D50F6DB005B22ED /* VidTalk-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VidTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		6F0216DE1D50F706005B22ED /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
+		6F0216E11D50F72B005B22ED /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewController.h; sourceTree = "<group>"; };
+		6F0216E21D50F72B005B22ED /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
+		6F0216E31D50F72B005B22ED /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		6F0216E81D50F7B5005B22ED /* AAPLPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPreviewView.h; sourceTree = "<group>"; };
+		6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPreviewView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,10 @@
 		6F0216C91D50F647005B22ED /* VidTalk */ = {
 			isa = PBXGroup;
 			children = (
+				6F0216E71D50F7AB005B22ED /* View */,
+				6F0216DF1D50F718005B22ED /* Controller */,
+				6F0216DD1D50F6F4005B22ED /* Protocols */,
+				6F0216DC1D50F6DB005B22ED /* VidTalk-Bridging-Header.h */,
 				6F0216CA1D50F647005B22ED /* AppDelegate.swift */,
 				6F0216CC1D50F647005B22ED /* ViewController.swift */,
 				6F0216CE1D50F647005B22ED /* Main.storyboard */,
@@ -62,6 +76,33 @@
 				6F0216D61D50F647005B22ED /* Info.plist */,
 			);
 			path = VidTalk;
+			sourceTree = "<group>";
+		};
+		6F0216DD1D50F6F4005B22ED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6F0216DE1D50F706005B22ED /* AAPLCameraVCDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		6F0216DF1D50F718005B22ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F0216E11D50F72B005B22ED /* AAPLCameraViewController.h */,
+				6F0216E21D50F72B005B22ED /* AAPLCameraViewController.m */,
+				6F0216E31D50F72B005B22ED /* CameraVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6F0216E71D50F7AB005B22ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F0216E81D50F7B5005B22ED /* AAPLPreviewView.h */,
+				6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +139,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7FUMWZ2NUV;
 						DevelopmentTeamName = "Andrew Ng";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,6 +182,9 @@
 			files = (
 				6F0216CD1D50F647005B22ED /* ViewController.swift in Sources */,
 				6F0216CB1D50F647005B22ED /* AppDelegate.swift in Sources */,
+				6F0216EA1D50F7B5005B22ED /* AAPLPreviewView.m in Sources */,
+				6F0216E41D50F72B005B22ED /* AAPLCameraViewController.m in Sources */,
+				6F0216E51D50F72B005B22ED /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +301,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VidTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndrewNg.VidTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VidTalk/VidTalk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -268,10 +317,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VidTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndrewNg.VidTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VidTalk/VidTalk-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -27,24 +27,24 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate   {
     }
     
     
-    @IBAction func recordBtnPressed(_ sender: AnyObject) {
+    @IBAction func recordBtnPressed(sender: AnyObject) {
         toggleMovieRecording()
         
     }
     
-    @IBAction func changeCameraBtnPressed(_ sender: AnyObject) {
+    @IBAction func changeCameraBtnPressed(sender: AnyObject) {
         changeCamera()
     }
     
-    func shouldEnableCameraUI(_ enable: Bool) {
+    func shouldEnableCameraUI(enable: Bool) {
         
-        cameraBtn.isEnabled = enable
+        cameraBtn.enabled = enable
         print("should enable camera UI:\(enable)")
         
     }
     
-    func shouldEnableRecordUI(_ enable: Bool) {
-        recordBtn.isEnabled = enable
+    func shouldEnableRecordUI(enable: Bool) {
+        recordBtn.enabled = enable
         print("should enable record UI: \(enable)")
     }
     

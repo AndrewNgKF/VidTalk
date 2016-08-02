@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="njq-sB-d1d">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--CameraVC-->
+        <scene sceneID="hnM-1h-syL">
+            <objects>
+                <viewController id="njq-sB-d1d" customClass="CameraVC" customModule="VidTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jMJ-Lq-IbE"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBj-Zq-rNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRr-Vz-Uxf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-l2-zHK" customClass="AAPLPreviewView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi9-wF-T9H">
+                                <rect key="frame" x="275" y="520" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6h6-hO-D6Z"/>
+                                    <constraint firstAttribute="height" constant="50" id="c1R-VN-TLA"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordBtnPressed:" destination="njq-sB-d1d" eventType="touchUpInside" id="Opf-W7-Nx6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK9-PI-2JQ">
+                                <rect key="frame" x="530" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WfP-Lb-Nph"/>
+                                    <constraint firstAttribute="height" constant="50" id="akc-Zl-gQb"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraBtnPressed:" destination="njq-sB-d1d" eventType="touchUpInside" id="Pal-qr-UYv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MK9-PI-2JQ" secondAttribute="trailing" constant="20" id="LBu-hA-AcX"/>
+                            <constraint firstAttribute="trailing" secondItem="ePp-l2-zHK" secondAttribute="trailing" id="NMO-Ws-qLc"/>
+                            <constraint firstItem="MK9-PI-2JQ" firstAttribute="top" secondItem="jMJ-Lq-IbE" secondAttribute="bottom" constant="20" id="RMl-Zg-I2I"/>
+                            <constraint firstItem="ePp-l2-zHK" firstAttribute="top" secondItem="jMJ-Lq-IbE" secondAttribute="bottom" id="Ut0-0b-jeu"/>
+                            <constraint firstItem="LBj-Zq-rNm" firstAttribute="top" secondItem="ePp-l2-zHK" secondAttribute="bottom" id="V7z-h6-qUz"/>
+                            <constraint firstItem="Wi9-wF-T9H" firstAttribute="centerX" secondItem="qRr-Vz-Uxf" secondAttribute="centerX" id="eGd-r1-skI"/>
+                            <constraint firstItem="LBj-Zq-rNm" firstAttribute="top" secondItem="Wi9-wF-T9H" secondAttribute="bottom" constant="30" id="fBg-qH-IVH"/>
+                            <constraint firstItem="ePp-l2-zHK" firstAttribute="leading" secondItem="qRr-Vz-Uxf" secondAttribute="leading" id="wEZ-4T-keu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBtn" destination="MK9-PI-2JQ" id="StO-DN-Yi7"/>
+                        <outlet property="previewView" destination="ePp-l2-zHK" id="rKg-XK-Ika"/>
+                        <outlet property="recordBtn" destination="Wi9-wF-T9H" id="Wbi-i3-Epb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-nX-ZmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="525"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
+</document>

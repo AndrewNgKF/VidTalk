@@ -64,16 +64,17 @@
                         <outlet property="cameraBtn" destination="MK9-PI-2JQ" id="StO-DN-Yi7"/>
                         <outlet property="previewView" destination="ePp-l2-zHK" id="rKg-XK-Ika"/>
                         <outlet property="recordBtn" destination="Wi9-wF-T9H" id="Wbi-i3-Epb"/>
+                        <segue destination="uiP-GI-APM" kind="presentation" identifier="LoginVC" id="xB0-4P-Dzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-nX-ZmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="525"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="RG2-X9-i7Q">
             <objects>
-                <viewController id="uiP-GI-APM" sceneMemberID="viewController">
+                <viewController id="uiP-GI-APM" customClass="LoginVC" customModule="VidTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KkZ-xs-CmL"/>
                         <viewControllerLayoutGuide type="bottom" id="75r-Jb-FR5"/>
@@ -164,6 +165,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="uiP-GI-APM" eventType="touchUpInside" id="5Nj-qM-A4I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.54847045849219112" blue="0.076920304324987421" alpha="0.84482758620689657" colorSpace="calibratedRGB"/>
@@ -191,6 +195,10 @@
                             <constraint firstItem="c1q-zb-LbH" firstAttribute="leading" secondItem="JJ6-RU-Fdm" secondAttribute="leading" id="qpu-Z0-Ajc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="8lv-2x-fHY" id="aBw-bz-6BG"/>
+                        <outlet property="passwordField" destination="LwH-Ym-jvZ" id="BQz-T2-OB5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofa-z1-HKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

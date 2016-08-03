@@ -10,6 +10,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 
 // Singleton to persist data to Firebase
 
@@ -31,6 +32,26 @@ class DataService {
         return mainRef.child("users")
         
     }
+    
+    var mainStorageRef: FIRStorageReference {
+        return FIRStorage.storage().referenceForURL("gs://vidtalk-adc15.appspot.com")
+    }
+    
+    
+    
+    
+    
+    var imagesStorageRef: FIRStorageReference {
+        return mainStorageRef.child("images")
+    }
+    
+    var videoStorageRef: FIRStorageReference {
+        return mainStorageRef.child("videos")
+    }
+    
+    
+    
+    
     
     func saveUser(uid: String) {
         let profile: Dictionary<String, AnyObject> = ["firstName": "", "lastName" : ""]

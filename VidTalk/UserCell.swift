@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class UserCell: UITableViewCell {
     
     @IBOutlet weak var firstNameLbl: UILabel!
@@ -16,6 +17,8 @@ class UserCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setCheckmark(false)
 
     }
     

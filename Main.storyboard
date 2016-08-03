@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="njq-sB-d1d">
+    <dependencies>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--CameraVC-->
+        <scene sceneID="hnM-1h-syL">
+            <objects>
+                <viewController id="njq-sB-d1d" customClass="CameraVC" customModule="VidTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jMJ-Lq-IbE"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBj-Zq-rNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRr-Vz-Uxf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-l2-zHK" customClass="AAPLPreviewView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi9-wF-T9H">
+                                        <rect key="frame" x="275" y="520" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="L2X-Yg-QDd"/>
+                                            <constraint firstAttribute="height" constant="50" id="n5U-86-8Ov"/>
+                                        </constraints>
+                                        <state key="normal" image="createsnap_btn"/>
+                                        <connections>
+                                            <action selector="recordBtnPressed:" destination="njq-sB-d1d" eventType="touchUpInside" id="Opf-W7-Nx6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK9-PI-2JQ">
+                                        <rect key="frame" x="509" y="39" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4Xs-xs-vrB"/>
+                                            <constraint firstAttribute="width" constant="50" id="fLi-q8-nMl"/>
+                                        </constraints>
+                                        <state key="normal" image="camera_icon_snap"/>
+                                        <connections>
+                                            <action selector="changeCameraBtnPressed:" destination="njq-sB-d1d" eventType="touchUpInside" id="Pal-qr-UYv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MK9-PI-2JQ" firstAttribute="top" secondItem="ePp-l2-zHK" secondAttribute="top" constant="39" id="B4w-A0-4Ob"/>
+                                    <constraint firstAttribute="trailing" secondItem="MK9-PI-2JQ" secondAttribute="trailing" constant="41" id="ifi-7Q-pZL"/>
+                                    <constraint firstItem="Wi9-wF-T9H" firstAttribute="centerX" secondItem="ePp-l2-zHK" secondAttribute="centerX" id="qf3-il-s1y"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wi9-wF-T9H" secondAttribute="bottom" constant="30" id="uMb-TM-Qze"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ePp-l2-zHK" firstAttribute="leading" secondItem="qRr-Vz-Uxf" secondAttribute="leading" id="8Vm-d3-gdy"/>
+                            <constraint firstAttribute="trailing" secondItem="ePp-l2-zHK" secondAttribute="trailing" id="iWb-Iy-xBC"/>
+                            <constraint firstItem="LBj-Zq-rNm" firstAttribute="top" secondItem="ePp-l2-zHK" secondAttribute="bottom" id="kLJ-Do-7eu"/>
+                            <constraint firstItem="ePp-l2-zHK" firstAttribute="top" secondItem="jMJ-Lq-IbE" secondAttribute="bottom" constant="-20" id="zAV-fp-jFb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBtn" destination="MK9-PI-2JQ" id="StO-DN-Yi7"/>
+                        <outlet property="previewView" destination="ePp-l2-zHK" id="rKg-XK-Ika"/>
+                        <outlet property="recordBtn" destination="Wi9-wF-T9H" id="Wbi-i3-Epb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLb-nX-ZmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="525"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RG2-X9-i7Q">
+            <objects>
+                <viewController id="uiP-GI-APM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KkZ-xs-CmL"/>
+                        <viewControllerLayoutGuide type="bottom" id="75r-Jb-FR5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JJ6-RU-Fdm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-VT-BPf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1q-zb-LbH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vid talk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpW-V2-GlK">
+                                        <rect key="frame" x="212" y="20" width="176" height="69"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                                        <color key="textColor" red="0.50196078431372548" green="0.18823529411764706" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-2x-fHY" customClass="RoundTextField" customModule="VidTalk" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="129" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Nbo-nN-3yt"/>
+                                            <constraint firstAttribute="height" constant="40" id="jz9-ey-DxK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99970538662953889" green="1" blue="0.92111024913730666" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.52566105769230775" green="0.21132038851661905" blue="0.096718827105748806" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LwH-Ym-jvZ" customClass="RoundTextField" customModule="VidTalk" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="199" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ed3-v5-2tj"/>
+                                            <constraint firstAttribute="width" constant="250" id="tng-GG-uDe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99970538659999997" green="1" blue="0.92111024909999994" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.52566105770000005" green="0.21132038850000001" blue="0.096718827110000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABm-Pb-Lwh" customClass="RoundButton" customModule="VidTalk" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="269" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8aY-GW-qn5"/>
+                                            <constraint firstAttribute="width" constant="250" id="FIi-77-3rg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="0.98279697990806525" blue="0.93056729660525128" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" red="0.26606334841628954" green="0.15075910973215573" blue="0.063058766991819476" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.96959774207083427" green="1" blue="0.92079171528010906" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.54847045849219112" blue="0.076920304324987421" alpha="0.84482758620689657" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LwH-Ym-jvZ" firstAttribute="top" secondItem="8lv-2x-fHY" secondAttribute="bottom" constant="30" id="B5V-zz-k58"/>
+                                    <constraint firstItem="8lv-2x-fHY" firstAttribute="centerX" secondItem="c1q-zb-LbH" secondAttribute="centerX" id="CYR-My-K2j"/>
+                                    <constraint firstItem="LwH-Ym-jvZ" firstAttribute="centerX" secondItem="c1q-zb-LbH" secondAttribute="centerX" id="GSj-7M-JcF"/>
+                                    <constraint firstItem="OpW-V2-GlK" firstAttribute="centerX" secondItem="c1q-zb-LbH" secondAttribute="centerX" id="LHC-64-CbO"/>
+                                    <constraint firstItem="ABm-Pb-Lwh" firstAttribute="top" secondItem="LwH-Ym-jvZ" secondAttribute="bottom" constant="30" id="X9e-t6-bOB"/>
+                                    <constraint firstItem="OpW-V2-GlK" firstAttribute="top" secondItem="c1q-zb-LbH" secondAttribute="top" constant="20" id="c4M-hT-95v"/>
+                                    <constraint firstItem="ABm-Pb-Lwh" firstAttribute="centerX" secondItem="c1q-zb-LbH" secondAttribute="centerX" id="tI5-uH-8tl"/>
+                                    <constraint firstItem="8lv-2x-fHY" firstAttribute="top" secondItem="OpW-V2-GlK" secondAttribute="bottom" constant="40" id="yKD-pw-2hm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gnB-VT-BPf" firstAttribute="top" secondItem="JJ6-RU-Fdm" secondAttribute="top" id="JBm-6k-5ne"/>
+                            <constraint firstItem="75r-Jb-FR5" firstAttribute="top" secondItem="gnB-VT-BPf" secondAttribute="bottom" id="JyK-CY-rF6"/>
+                            <constraint firstAttribute="trailing" secondItem="c1q-zb-LbH" secondAttribute="trailing" id="Ls7-FY-PAe"/>
+                            <constraint firstItem="c1q-zb-LbH" firstAttribute="top" secondItem="JJ6-RU-Fdm" secondAttribute="top" id="NRT-uj-9I8"/>
+                            <constraint firstAttribute="trailing" secondItem="gnB-VT-BPf" secondAttribute="trailing" id="Nxe-Wf-G9i"/>
+                            <constraint firstItem="gnB-VT-BPf" firstAttribute="leading" secondItem="JJ6-RU-Fdm" secondAttribute="leading" id="XFH-cz-RzO"/>
+                            <constraint firstItem="75r-Jb-FR5" firstAttribute="top" secondItem="c1q-zb-LbH" secondAttribute="bottom" id="gA6-Nh-lTJ"/>
+                            <constraint firstItem="c1q-zb-LbH" firstAttribute="leading" secondItem="JJ6-RU-Fdm" secondAttribute="leading" id="qpu-Z0-Ajc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofa-z1-HKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171" y="553"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+        <image name="loginBG" width="1920" height="1080"/>
+    </resources>
+</document>

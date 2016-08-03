@@ -7,14 +7,43 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private var users = [User]()
 
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.allowsMultipleSelection = true
+        
+        
+        
+        DataService.instance.usersRef.observeSingleEventOfType(.Value) { (snapshot: FIRDataSnapshot) in
+            
+            
+            //parse the data
+            if let users = snapshot.value as? Dictionary<String, AnyObject> {
+                for (key, value) in users {
+                    if let dict = value as? Dictionary<String, AnyObject> {
+                        if let profile = dict["profile"] as? Dictionary<String, AnyObject> {
+                            if let firstName = profile["firstName"] as? String {
+                                let uid = key
+                                let user = User(uid: uid, firstName: firstName)
+                                
+                                self.users.append(user)
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
         
         super.viewDidLoad()
 

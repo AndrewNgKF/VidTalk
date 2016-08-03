@@ -6,6 +6,8 @@
 //  Copyright © 2016 Andrew Ng. All rights reserved.
 //
 
+
+
 import Foundation
 import FirebaseDatabase
 
@@ -22,6 +24,11 @@ class DataService {
     var mainRef: FIRDatabaseReference {
         
         return FIRDatabase.database().reference()
+        
+    }
+    
+    var usersRef: FIRDatabaseReference {
+        return mainRef.child("users")
         
     }
     

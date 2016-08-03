@@ -18,6 +18,7 @@
 		6F26C9441D51E2AF00BD21DA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26C9431D51E2AF00BD21DA /* DataService.swift */; };
 		6F26C9461D51E78400BD21DA /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26C9451D51E78400BD21DA /* UsersVC.swift */; };
 		6F26C9481D51E8F800BD21DA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26C9471D51E8F800BD21DA /* UserCell.swift */; };
+		6F26C94A1D51ED3A00BD21DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26C9491D51ED3A00BD21DA /* User.swift */; };
 		6F535E6F1D50FBC9004021A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E6E1D50FBC9004021A7 /* Main.storyboard */; };
 		6F535E711D50FC59004021A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E701D50FC59004021A7 /* Launch Screen.storyboard */; };
 		6F535E731D5101D0004021A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E721D5101D0004021A7 /* GoogleService-Info.plist */; };
@@ -45,6 +46,7 @@
 		6F26C9431D51E2AF00BD21DA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6F26C9451D51E78400BD21DA /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		6F26C9471D51E8F800BD21DA /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		6F26C9491D51ED3A00BD21DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6F535E6E1D50FBC9004021A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		6F535E701D50FC59004021A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6F535E721D5101D0004021A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		6F0216C91D50F647005B22ED /* VidTalk */ = {
 			isa = PBXGroup;
 			children = (
+				6F26C9491D51ED3A00BD21DA /* User.swift */,
 				6F26C9401D51B29F00BD21DA /* Services */,
 				6F0216E71D50F7AB005B22ED /* View */,
 				6F0216DF1D50F718005B22ED /* Controller */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F26C94A1D51ED3A00BD21DA /* User.swift in Sources */,
 				6F0216CD1D50F647005B22ED /* ViewController.swift in Sources */,
 				6F0216CB1D50F647005B22ED /* AppDelegate.swift in Sources */,
 				6F26C93F1D519C3C00BD21DA /* LoginVC.swift in Sources */,

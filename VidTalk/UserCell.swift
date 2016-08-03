@@ -16,13 +16,25 @@ class UserCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+    }
+    
+    func updateUI(user: User) {
+        
+        firstNameLbl.text = user.firstName
+        
+        
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setCheckmark(selected: Bool) {
+        
+        let imageStr = selected ? "messageindicatorchecked1" : "messageindicator1"
+        self.accessoryView = UIImageView(image:  UIImage(named: imageStr))
+        
     }
 
+    
+    
+    
+    
 }

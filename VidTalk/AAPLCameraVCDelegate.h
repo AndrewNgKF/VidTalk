@@ -8,6 +8,7 @@
 
 #ifndef Header_h
 #define Header_h
+
 #import "VidTalk-Bridging-Header.h"
 #import "AAPLCameraViewController.h"
 #import "AAPLPreviewView.h"

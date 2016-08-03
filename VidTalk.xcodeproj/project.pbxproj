@@ -15,6 +15,9 @@
 		6F0216EA1D50F7B5005B22ED /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */; };
 		6F535E6F1D50FBC9004021A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E6E1D50FBC9004021A7 /* Main.storyboard */; };
 		6F535E711D50FC59004021A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E701D50FC59004021A7 /* Launch Screen.storyboard */; };
+		6F535E731D5101D0004021A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F535E721D5101D0004021A7 /* GoogleService-Info.plist */; };
+		6F9150831D518E0800FD109C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9150821D518E0800FD109C /* RoundTextField.swift */; };
+		6F9150851D51977500FD109C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9150841D51977500FD109C /* RoundButton.swift */; };
 		724A5B33B5D668D0B3013011 /* Pods_VidTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37679812D6581125A618C07A /* Pods_VidTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPreviewView.m; sourceTree = "<group>"; };
 		6F535E6E1D50FBC9004021A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		6F535E701D50FC59004021A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6F535E721D5101D0004021A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6F9150821D518E0800FD109C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		6F9150841D51977500FD109C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		E2470EED80BD8228EB18E934 /* Pods-VidTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VidTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VidTalk/Pods-VidTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		F22D0AE18FDD075F1DF40917 /* Pods-VidTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VidTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-VidTalk/Pods-VidTalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +104,7 @@
 				6F0216D11D50F647005B22ED /* Assets.xcassets */,
 				6F0216D61D50F647005B22ED /* Info.plist */,
 				6F535E701D50FC59004021A7 /* Launch Screen.storyboard */,
+				6F535E721D5101D0004021A7 /* GoogleService-Info.plist */,
 			);
 			path = VidTalk;
 			sourceTree = "<group>";
@@ -125,6 +132,8 @@
 			children = (
 				6F0216E81D50F7B5005B22ED /* AAPLPreviewView.h */,
 				6F0216E91D50F7B5005B22ED /* AAPLPreviewView.m */,
+				6F9150821D518E0800FD109C /* RoundTextField.swift */,
+				6F9150841D51977500FD109C /* RoundButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F535E711D50FC59004021A7 /* Launch Screen.storyboard in Resources */,
+				6F535E731D5101D0004021A7 /* GoogleService-Info.plist in Resources */,
 				6F0216D21D50F647005B22ED /* Assets.xcassets in Resources */,
 				6F535E6F1D50FBC9004021A7 /* Main.storyboard in Resources */,
 			);
@@ -257,8 +267,10 @@
 			files = (
 				6F0216CD1D50F647005B22ED /* ViewController.swift in Sources */,
 				6F0216CB1D50F647005B22ED /* AppDelegate.swift in Sources */,
+				6F9150851D51977500FD109C /* RoundButton.swift in Sources */,
 				6F0216EA1D50F7B5005B22ED /* AAPLPreviewView.m in Sources */,
 				6F0216E41D50F72B005B22ED /* AAPLCameraViewController.m in Sources */,
+				6F9150831D518E0800FD109C /* RoundTextField.swift in Sources */,
 				6F0216E51D50F72B005B22ED /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
